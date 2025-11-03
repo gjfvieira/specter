@@ -22,6 +22,8 @@ This project is a **work-in-progress** and was created using **vibe coding**. Se
   * **Rich Output:** Uses `rich` for clean console output and progress bars.
   * **Filtering:** Allows filtering by sub-paths, included/excluded HTTP verbs, and authentication status.
 
+-----
+
 ## Installation
 
 1.  Clone this repository:
@@ -43,6 +45,44 @@ This project is a **work-in-progress** and was created using **vibe coding**. Se
     ```bash
     pip install -r specter/requirements.txt
     ```
+
+> [\!WARNING]
+> **Python \> 3.12 Compatibility Notice**
+>
+> The `tree-sitter-languages` package is **no longer maintained** and will **fail to install** on Python 3.13 and newer.
+>
+> If you are using Python \> 3.12, you must remove `tree-sitter-languages` from `specter/requirements.txt` and use the following manual build process to install the last working version (v1.10.2):
+>
+> ```bash
+> # Install build dependencies
+> pip install Cython setuptools tree-sitter==0.21.3 wheel
+> ```
+
+> # Download the last working version
+>
+> curl -L -o tree-sitter-languages-1.10.2.tar.gz https://github.com/grantjenks/py-tree-sitter-languages/archive/refs/tags/v1.10.2.tar.gz
+
+> # Unpack, build, and install
+>
+> tar -x -f tree-sitter-languages-1.10.2.tar.gz
+> cd py-tree-sitter-languages-1.10.2
+> python build.py
+> cd ..
+> pip install py-tree-sitter-languages-1.10.2
+
+> # Clean up
+>
+> rm -f tree-sitter-languages-1.10.2.tar.gz
+> rm -rf py-tree-sitter-languages-1.10.2
+
+> # Test the installation
+>
+> python -c 'from tree\_sitter\_languages import get\_language; get\_language("python")'
+>
+> ```
+> ```
+
+-----
 
 ## Usage
 
