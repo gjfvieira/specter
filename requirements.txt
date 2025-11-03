@@ -2,8 +2,8 @@ typer[all]
 pydantic
 GitPython
 rich
-tree-sitter
-tree-sitter-languages
+tree-sitter==0.21.3
+tree-sitter-languages==1.10.2
 tree-sitter-java
 tree-sitter-python
 tree-sitter-javascript
