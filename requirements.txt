@@ -1,0 +1,10 @@
+typer[all]
+pydantic
+GitPython
+rich
+tree-sitter
+tree-sitter-languages
+tree-sitter-java
+tree-sitter-python
+tree-sitter-javascript
+tree-sitter-typescript
